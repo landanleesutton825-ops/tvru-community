@@ -35,24 +35,24 @@ h1.title{font-size:34px;margin:0 0 4px}.intro{color:var(--muted);margin:0 0 20px
 <button class="navbtn" data-page="undertale" onclick="showPage('undertale')"><span class="ico">💜</span>Undertale & Deltarune</button>
 <button class="navbtn" data-page="fallout" onclick="showPage('fallout')"><span class="ico">☢️</span>Fallout</button>
 <div class="sidebottom">TVRU COMMUNITY SPACE<a class="discord" href="https://discord.gg/5AejXzyDG" target="_blank" rel="noopener">Join the Discord ↗</a><span>Share respectfully. Keep uploads appropriate and credit creators.</span></div></aside>
-<div class="main"><header class="topbar"><div style="display:flex;align-items:center;gap:12px"><button class="hamb" onclick="toggleSide()">☰</button><span class="mobilebrand">TVRU / COMMUNITY</span><span class="crumb" id="crumb">Community overview</span></div><div class="topright"><span class="pill">✦ Creative community</span><span class="pill">Public gallery · Local demo</span></div></header>
+<div class="main"><header class="topbar"><div style="display:flex;align-items:center;gap:12px"><button class="hamb" onclick="toggleSide()">☰</button><span class="mobilebrand">TVRU / COMMUNITY</span><span class="crumb" id="crumb">Community overview</span></div><div class="topright"><span class="pill">✦ Creative community</span><span class="pill">Public gallery · GitHub storage</span></div></header>
 <main class="content">
 <section class="page active" id="home"><div class="hero"><div class="eyebrow">WELCOME TO THE VOICE RP UNIVERSE</div><h1>YOUR UNIVERSE.<br><span>YOUR COMMUNITY.</span></h1><p>A shared home for roleplay characters, lore, vehicles, builds, art, comics, game fandoms, and community uploads. Make something, give it a title, and add it to the library.</p><div class="actions"><button class="btn primary" onclick="showPage('upload')">＋ Share something</button><button class="btn" onclick="showPage('create')">✦ Create an RP character</button><a class="btn" style="text-decoration:none" href="https://discord.gg/5AejXzyDG" target="_blank" rel="noopener">Join Discord ↗</a></div></div>
-<div class="stats"><div class="stat"><strong id="statUploads">0</strong><span>Community uploads on this device</span></div><div class="stat"><strong>17</strong><span>Dedicated community sections</span></div><div class="stat"><strong>∞</strong><span>Stories to create</span></div><div class="stat"><strong>TVRU</strong><span>Create · Connect · Imagine</span></div></div>
+<div class="stats"><div class="stat"><strong id="statUploads">0</strong><span>Community uploads</span></div><div class="stat"><strong>17</strong><span>Dedicated community sections</span></div><div class="stat"><strong>∞</strong><span>Stories to create</span></div><div class="stat"><strong>TVRU</strong><span>Create · Connect · Imagine</span></div></div>
 <div class="sectionhead"><div><h2>Explore the community</h2><p>Jump into one of the dedicated spaces.</p></div><button class="btn" onclick="showPage('library')">Browse library →</button></div><div class="tiles" id="homeTiles"></div>
 </section>
 <section class="page" id="upload"><h1 class="title">Upload Center</h1><p class="intro">Share a file with a clear title, description, and category. Images display as gallery cards; other files appear as downloadable attachments.</p>
-<div class="notice"><b>Demo storage:</b> Uploads on this version are saved in this browser only. Other members will not see them until cloud storage is connected. Keep uploads under 2 MB in this demo. Never upload private information or files you do not have permission to share.</div>
+<div class="notice"><b>Community cloud storage:</b> Uploads are saved to the TVRU GitHub repository and can be viewed by everyone. Files must be 8 MB or smaller. Never upload private information or files you do not have permission to share. Submissions appear publicly, so only upload content you are allowed to share.</div>
 <div class="upload-layout"><div class="panel"><h2>New community submission</h2><form id="uploadForm"><div class="fields">
 <div class="field full"><label for="upTitle">Title *</label><input id="upTitle" maxlength="80" required placeholder="Give your upload a name"></div>
 <div class="field"><label for="upCategory">Category *</label><select id="upCategory" required></select></div>
 <div class="field"><label for="upCreator">Creator / display name</label><input id="upCreator" maxlength="40" placeholder="Your community name"></div>
 <div class="field full"><label for="upDesc">Description</label><textarea id="upDesc" maxlength="500" placeholder="What is it? Add context, credits, version info, or details..."></textarea></div>
 <div class="field full"><label for="upTags">Tags (comma separated)</label><input id="upTags" maxlength="120" placeholder="e.g. character, concept art, WIP"></div>
-<div class="field full"><label>Choose a file *</label><div class="drop">Drop a file here or browse from your device<br><input id="upFile" type="file" required accept="image/*,.pdf,.txt,.zip,.7z,.rar,.json,.xml,.yft,.ytd,.ydd,.ymt,.ini,.meta"></div><div class="hint" id="fileHint">Images, documents, archives, and supported game files. Maximum 2 MB in local demo mode.</div></div>
+<div class="field full"><label>Choose a file *</label><div class="drop">Drop a file here or browse from your device<br><input id="upFile" type="file" required accept=".png,.jpg,.jpeg,.webp,.gif,.pdf,.txt,.md,.json,.xml,.ini,.cfg,.zip,.7z,.rar,.yft,.ytd,.ydd,.ymt,.ydr,.ymap,.meta,.dds"></div><div class="hint" id="fileHint">Images, documents, archives, and supported game files. Maximum 8 MB.</div></div>
 <div class="field full"><label><input type="checkbox" id="upCredit" required> I have permission to share this file and have credited its creator where required.</label></div>
 </div><div class="actions"><button class="btn primary" type="submit">Submit upload</button><button class="btn" type="reset">Clear form</button></div></form></div>
-<aside class="panel"><h2>Submission checklist</h2><p class="muted">Help everyone find and understand your work.</p><ul class="muted"><li>Use a descriptive title.</li><li>Choose the closest matching category.</li><li>Include credits and version details.</li><li>Do not upload personal or confidential information.</li><li>Only share files you have permission to distribute.</li></ul><div class="notice">In the cloud-enabled version, submissions can be held for moderator approval before appearing publicly.</div></aside></div></section>
+<aside class="panel"><h2>Submission checklist</h2><p class="muted">Help everyone find and understand your work.</p><ul class="muted"><li>Use a descriptive title.</li><li>Choose the closest matching category.</li><li>Include credits and version details.</li><li>Do not upload personal or confidential information.</li><li>Only share files you have permission to distribute.</li></ul><div class="notice">Community submissions are stored in the shared repository and appear in the public library. Do not submit private or restricted files.</div></aside></div></section>
 <section class="page" id="library"><h1 class="title">Community Library</h1><p class="intro">Discover artwork, RP resources, files, builds, and posts shared by members.</p><div class="toolbar"><input id="libSearch" placeholder="Search titles, descriptions, tags..." oninput="renderLibrary()"><select id="libFilter" onchange="renderLibrary()"><option value="">All categories</option></select><select id="libSort" onchange="renderLibrary()"><option value="new">Newest first</option><option value="old">Oldest first</option><option value="az">Title A–Z</option></select></div><div class="gallery" id="gallery"></div></section>
 <section class="page" id="create"><section class="page" id="create">
 <h1 class="page-title">Create Your RP OC</h1><p class="intro">Make an original character profile. Build a detailed character sheet. Your private draft stays in this browser until you choose to export it.</p>
@@ -89,17 +89,33 @@ h1.title{font-size:34px;margin:0 0 4px}.intro{color:var(--muted);margin:0 0 20px
 <section class="page" id="bendy"><h1 class="title">Bendy Hell</h1><p class="intro">Bendy-inspired fan creations, theories, art, and community projects.</p><button class="btn primary" onclick="newUpload('Bendy Hell')">＋ Share Bendy content</button><div class="gallery" id="cat-bendy"></div></section>
 <section class="page" id="undertale"><h1 class="title">Undertale & Deltarune</h1><p class="intro">Fan art, AU concepts, theories, music discussion, and character projects.</p><button class="btn primary" onclick="newUpload('Undertale & Deltarune')">＋ Share fan content</button><div class="gallery" id="cat-undertale"></div></section>
 <section class="page" id="fallout"><h1 class="title">Fallout</h1><p class="intro">Wasteland builds, character concepts, screenshots, lore notes, and fan creations.</p><button class="btn primary" onclick="newUpload('Fallout')">＋ Share Fallout content</button><div class="gallery" id="cat-fallout"></div></section>
-</main><footer>THE VOICE RP UNIVERSE · CREATE · CONNECT · IMAGINE<br>Community uploads in this package are local to the current browser until cloud storage is configured.</footer></div></div>
+</main><footer>THE VOICE RP UNIVERSE · CREATE · CONNECT · IMAGINE<br>Community uploads are stored in the TVRU GitHub repository and shared through the public library.</footer></div></div>
 <div class="toast" id="toast"></div>
 <script>
 const DISCORD_URL='https://discord.gg/5AejXzyDG';
+const UPLOAD_API='https://tvru-upload-api.landanleesutton821.workers.dev';
 const cats=[['Characters & Lore','👉'],['Information Hub','📌'],['Lore Items','🗝️'],['Car Info Dump','🚘'],['Character Pictures','👤'],['Media','🖼️'],['Comics','📱'],['Post Your Art','🎨'],['NFS Zone','🏎️'],['Minecraft','🌳'],['Horror Games','👻'],['Bendy Hell','🟡'],['Undertale & Deltarune','💜'],['Fallout','☢️'],['City Builds','🏙️'],['Other','📦']];
 const pageCats=[['characters','Characters & Lore','👉'],['info','Information Hub','📌'],['items','Lore Items','🗝️'],['cars','Car Info Dump','🚘'],['portraits','Character Pictures','👤'],['media','Media','🖼️'],['comics','Comics','📱'],['art','Post Your Art','🎨'],['nfs','NFS Zone','🏎️'],['minecraft','Minecraft','🌳'],['horror','Horror Games','👻'],['bendy','Bendy Hell','🟡'],['undertale','Undertale & Deltarune','💜'],['fallout','Fallout','☢️']];
 const fields=['ocName','ocAge','ocPronouns','ocRole','ocSpecies','ocUniverse','ocPersonality','ocAlignment','ocAppearance','ocBackstory','ocSkills','ocNotes'];
 const getOCs=()=>{try{return JSON.parse(localStorage.getItem('tvru_ocs')||'[]')}catch{return []}};
 const setOCs=x=>localStorage.setItem('tvru_ocs',JSON.stringify(x));
-const getUploads=()=>{try{return JSON.parse(localStorage.getItem('tvru_uploads')||'[]')}catch{return []}};
-const setUploads=x=>localStorage.setItem('tvru_uploads',JSON.stringify(x));
+// Community uploads are loaded from GitHub through the Cloudflare Worker.
+let cloudUploads=[];
+const getUploads=()=>cloudUploads;
+async function loadUploads(){
+  try{
+    const response=await fetch(`${UPLOAD_API}/uploads`);
+    if(!response.ok) throw new Error('Could not load uploads.');
+    const result=await response.json();
+    cloudUploads=Array.isArray(result.uploads)?result.uploads:[];
+    renderStats();
+    renderLibrary();
+    pageCats.forEach(([id,category])=>renderCategory(id,category));
+  }catch(error){
+    console.error('TVRU library error:',error);
+    toast('Could not connect to the Community Library.');
+  }
+}
 function toast(m){let t=document.getElementById('toast');t.textContent=m;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2600)}
 function showPage(id){document.querySelectorAll('.page').forEach(p=>p.classList.toggle('active',p.id===id));document.querySelectorAll('.navbtn').forEach(b=>b.classList.toggle('active',b.dataset.page===id));let b=document.querySelector(`[data-page="${id}"]`);document.getElementById('crumb').textContent=b?b.textContent.trim():'Community overview';document.getElementById('sidebar').classList.remove('open');if(id==='vault')renderVault();if(id==='library')renderLibrary();if(id==='home')renderStats();let cat=pageCats.find(x=>x[0]===id);if(cat)renderCategory(id,cat[1]);window.scrollTo({top:0,behavior:'smooth'})}
 function toggleSide(){document.getElementById('sidebar').classList.toggle('open')}
@@ -111,10 +127,40 @@ function renderTiles(){document.getElementById('homeTiles').innerHTML=pageCats.m
 function initCategories(){let opts=cats.map(c=>`<option>${c[0]}</option>`).join('');document.getElementById('upCategory').innerHTML=opts;document.getElementById('libFilter').innerHTML='<option value="">All categories</option>'+opts}
 function newUpload(category){showPage('upload');document.getElementById('upCategory').value=category;document.getElementById('upTitle').focus()}
 function renderLibrary(){let q=(document.getElementById('libSearch')?.value||'').toLowerCase(),cat=document.getElementById('libFilter')?.value||'',sort=document.getElementById('libSort')?.value||'new';let items=getUploads().filter(x=>(!cat||x.category===cat)&&(`${x.title} ${x.description} ${x.creator} ${(x.tags||[]).join(' ')}`).toLowerCase().includes(q));items.sort((a,b)=>sort==='az'?a.title.localeCompare(b.title):sort==='old'?a.created.localeCompare(b.created):b.created.localeCompare(a.created));document.getElementById('gallery').innerHTML=items.length?items.map(uploadCard).join(''):'<div class="empty">Nothing here yet. Be the first to share something with the community.</div>'}
-function uploadCard(x){let preview=x.type?.startsWith('image/')?`<img src="${x.data}" alt="${esc(x.title)}">`:fileIcon(x.filename||'file');return `<article class="uploadcard"><div class="thumb">${preview}</div><div class="uploadbody"><h3>${esc(x.title)}</h3><p>${esc(x.description||'No description provided.')}</p><span class="tag">${esc(x.category)}</span><span class="tag">by ${esc(x.creator||'Community member')}</span><div class="hint" style="margin-top:8px">${esc((x.tags||[]).map(t=>'#'+t).join(' '))}</div><div class="actions"><a class="btn" style="text-decoration:none;font-size:11px" href="${x.data}" download="${esc(x.filename)}">Download</a><button class="btn danger" style="font-size:11px" onclick="deleteUpload('${x.id}')">Remove</button></div></div></article>`}
+function uploadCard(x){let preview=x.type?.startsWith('image/')?`<img src="${esc(x.data)}" alt="${esc(x.title)}">`:fileIcon(x.filename||'file');return `<article class="uploadcard"><div class="thumb">${preview}</div><div class="uploadbody"><h3>${esc(x.title)}</h3><p>${esc(x.description||'No description provided.')}</p><span class="tag">${esc(x.category)}</span><span class="tag">by ${esc(x.creator||'Community member')}</span><div class="hint" style="margin-top:8px">${esc((x.tags||[]).map(t=>'#'+t).join(' '))}</div><div class="actions"><a class="btn" style="text-decoration:none;font-size:11px" href="${esc(x.data)}" target="_blank" rel="noopener">Open / Download</a></div></div></article>`}
 function renderCategory(id,category){let root=document.getElementById('cat-'+id);if(!root)return;let items=getUploads().filter(x=>x.category===category);root.innerHTML=items.length?items.map(uploadCard).join(''):'<div class="empty">No submissions in this section yet. Use the upload button to add the first one.</div>'}
-function deleteUpload(id){if(!confirm('Remove this upload from this browser?'))return;setUploads(getUploads().filter(x=>x.id!==id));renderLibrary();renderStats();pageCats.forEach(([id,c])=>renderCategory(id,c));toast('Upload removed.')}
-document.getElementById('uploadForm').addEventListener('submit',async e=>{e.preventDefault();let f=document.getElementById('upFile').files[0];if(!f)return;if(f.size>2*1024*1024){toast('File is over 2 MB. Reduce its size for local demo mode.');return}let data=await new Promise((resolve,reject)=>{let r=new FileReader();r.onload=()=>resolve(r.result);r.onerror=reject;r.readAsDataURL(f)});let item={id:crypto.randomUUID?crypto.randomUUID():String(Date.now()),title:val('upTitle'),category:val('upCategory'),creator:val('upCreator')||'Community member',description:val('upDesc'),tags:val('upTags').split(',').map(s=>s.trim()).filter(Boolean),filename:f.name,type:f.type,data,created:new Date().toISOString()};let all=getUploads();all.unshift(item);try{setUploads(all)}catch(err){toast('Browser storage is full. Remove older uploads or use cloud storage.');return}e.target.reset();renderStats();renderLibrary();toast('Upload saved in this browser!');showPage('library')});
+document.getElementById('uploadForm').addEventListener('submit',async e=>{
+  e.preventDefault();
+  const form=e.currentTarget;
+  const file=document.getElementById('upFile').files[0];
+  if(!file){toast('Please choose a file.');return;}
+  if(file.size>8*1024*1024){toast('Files must be 8 MB or smaller.');return;}
+  const submitButton=form.querySelector('button[type="submit"]');
+  submitButton.disabled=true;
+  submitButton.textContent='Uploading...';
+  try{
+    const data=new FormData();
+    data.append('file',file);
+    data.append('title',val('upTitle'));
+    data.append('category',val('upCategory'));
+    data.append('creator',val('upCreator')||'Community member');
+    data.append('description',val('upDesc'));
+    data.append('tags',val('upTags'));
+    const response=await fetch(UPLOAD_API,{method:'POST',body:data});
+    const result=await response.json();
+    if(!response.ok||!result.success) throw new Error(result.error||'Upload failed.');
+    form.reset();
+    await loadUploads();
+    toast('Upload saved to the TVRU Community Library!');
+    showPage('library');
+  }catch(error){
+    console.error('TVRU upload error:',error);
+    toast(error.message||'Upload failed. Please try again.');
+  }finally{
+    submitButton.disabled=false;
+    submitButton.textContent='Submit upload';
+  }
+});
 const getOCsOld=getOCs;
 function showCreatePlaceholder(){showPage('create')}
 function updatePreview(){const name=val('ocName');document.getElementById('previewName').textContent=name||'Your character';document.getElementById('previewRole').textContent=val('ocRole')||'Role / occupation';['Age','Pronouns','Species','Universe','Personality'].forEach((k,i)=>document.getElementById('preview'+k).textContent=val(['ocAge','ocPronouns','ocSpecies','ocUniverse','ocPersonality'][i])||'—');document.getElementById('previewAvatar').textContent=name?name.charAt(0).toUpperCase():'✦'}
@@ -129,5 +175,5 @@ function downloadOC(id){let o=getOCs().find(x=>x.id===id);if(o)downloadFile((o.n
 function exportAll(){downloadFile('tvru-character-vault.json',JSON.stringify(getOCs(),null,2),'application/json')}
 function deleteOC(id){if(!confirm('Delete this character from your local vault?'))return;setOCs(getOCs().filter(o=>o.id!==id));renderVault();toast('Character deleted.')}
 function saveLore(){let title=val('loreTitle'),body=val('loreText');if(!title&&!body){toast('Write a note first.');return}let n=[];try{n=JSON.parse(localStorage.getItem('tvru_lore')||'[]')}catch{}n.unshift({title,body,date:new Date().toISOString()});localStorage.setItem('tvru_lore',JSON.stringify(n));document.getElementById('loreSaved').textContent=`Saved ${n.length} lore note(s) in this browser.`;document.getElementById('loreTitle').value='';document.getElementById('loreText').value='';toast('Lore note saved locally!')}
-initCategories();renderTiles();renderStats();renderLibrary();updatePreview();
+initCategories();renderTiles();renderStats();renderLibrary();updatePreview();loadUploads();
 </script></body></html>
