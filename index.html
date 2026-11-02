@@ -5,56 +5,161 @@
 :root{--bg:#0b0b12;--panel:#14141e;--panel2:#1b1b29;--line:#2b2b3d;--purple:#8b5cf6;--violet:#b69aff;--gold:#f2ca72;--text:#f5f2fc;--muted:#a9a5b7;--green:#71d9ae;--red:#f28a9b}
 *{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 70% -15%,#392253 0,transparent 38%),var(--bg);color:var(--text);font:14px/1.55 Inter,Segoe UI,Arial,sans-serif}button,input,select,textarea{font:inherit}button{cursor:pointer}.app{display:grid;grid-template-columns:260px minmax(0,1fr);min-height:100vh}.side{position:sticky;top:0;height:100vh;background:#101018;border-right:1px solid var(--line);padding:20px 14px;overflow:auto}.brand{display:flex;align-items:center;gap:12px;padding:4px 8px 22px;text-decoration:none;color:white}.brandmark{width:43px;height:43px;border-radius:14px;background:linear-gradient(140deg,#a879ff,#52328c);display:grid;place-items:center;color:white;font-weight:1000;font-size:18px;box-shadow:0 8px 28px #8b5cf644}.brand b{display:block;font-size:13px;letter-spacing:.12em}.brand small{color:var(--gold);font-size:9px;letter-spacing:.2em}.navlabel{color:#777487;font-size:10px;font-weight:900;letter-spacing:.16em;text-transform:uppercase;padding:15px 11px 6px}.navbtn{display:flex;align-items:center;gap:11px;width:100%;border:0;background:transparent;color:#b9b6c7;padding:10px 12px;border-radius:10px;text-align:left;margin:2px 0;font-weight:650;transition:.15s}.navbtn:hover,.navbtn.active{background:#292039;color:white}.navbtn.active{box-shadow:inset 3px 0 var(--purple)}.navbtn .ico{width:20px;text-align:center;font-size:16px}.sidebottom{margin-top:20px;padding:14px 10px;border-top:1px solid var(--line);color:var(--muted);font-size:11px}.discord{display:block;text-align:center;text-decoration:none;color:white;background:linear-gradient(120deg,#7d50d9,#5634a1);border:1px solid #b79aff55;border-radius:11px;padding:11px;font-weight:850;margin:10px 0}
 .main{min-width:0}.topbar{height:70px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 30px;background:#101018d9;backdrop-filter:blur(15px);position:sticky;top:0;z-index:5}.crumb{color:var(--muted);font-size:12px}.topright{display:flex;align-items:center;gap:12px}.pill{border:1px solid var(--line);background:#171722;color:#c9c5d5;padding:7px 11px;border-radius:20px;font-size:11px}.mobilebrand,.hamb{display:none}.content{max-width:1450px;margin:auto;padding:30px}.page{display:none}.page.active{display:block}.hero{border:1px solid #50366c;border-radius:22px;padding:54px 5%;background:linear-gradient(110deg,#21152fef,#13121eec 65%,#38234abf);position:relative;overflow:hidden;box-shadow:0 25px 75px #0005}.hero:after{content:"TVRU";position:absolute;right:2%;bottom:-65px;font-size:clamp(100px,18vw,240px);font-weight:1000;color:#ffffff08;letter-spacing:-.08em;pointer-events:none}.eyebrow{color:var(--gold);font-size:10px;letter-spacing:.24em;font-weight:900}.hero h1{font-size:clamp(38px,5vw,66px);line-height:1.02;margin:12px 0;max-width:750px}.hero h1 span{color:var(--violet)}.hero p{max-width:620px;color:#d0c9dc;font-size:16px}.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}.btn{border:1px solid #55416c;background:#292039;color:white;border-radius:10px;padding:10px 15px;font-weight:800}.btn.primary{background:linear-gradient(130deg,#986af4,#663eb4);border-color:#bba2ff}.btn.gold{background:linear-gradient(130deg,#f4d78c,#bd913d);color:#21192a;border:0}.btn.danger{border-color:#713b4b;background:#3a202b}.btn:hover{filter:brightness(1.13);transform:translateY(-1px)}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:18px 0 30px}.stat,.panel,.tile,.uploadcard,.oc-card{background:linear-gradient(145deg,#191923,#14141d);border:1px solid var(--line);border-radius:15px;padding:17px}.stat strong{display:block;font-size:22px;color:var(--gold)}.stat span{color:var(--muted);font-size:11px}.sectionhead{display:flex;align-items:end;justify-content:space-between;gap:14px;margin:26px 0 13px}.sectionhead h2{margin:0;font-size:22px}.sectionhead p,.muted{color:var(--muted);margin:3px 0 0}.tiles{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px}.tile{cursor:pointer;transition:.15s}.tile:hover{border-color:#7556a0;transform:translateY(-2px)}.tile .tileico{width:39px;height:39px;border-radius:12px;background:#322247;display:grid;place-items:center;font-size:19px;margin-bottom:12px}.tile h3{margin:0 0 4px;font-size:15px}.tile p{margin:0;color:var(--muted);font-size:12px}.tile .go{color:var(--gold);font-weight:800;font-size:11px;margin-top:12px;display:block}
-h1.title{font-size:34px;margin:0 0 4px}.intro{color:var(--muted);margin:0 0 20px}.toolbar{display:flex;gap:9px;flex-wrap:wrap;margin:15px 0}.toolbar input,.toolbar select,.control{background:#101019;color:white;border:1px solid var(--line);border-radius:9px;padding:10px 12px}.toolbar input{flex:1;min-width:180px}.upload-layout,.form-layout{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(270px,.85fr);gap:15px;align-items:start}.panel h2{margin:0 0 14px;font-size:18px}.fields{display:grid;grid-template-columns:1fr 1fr;gap:12px}.field{display:flex;flex-direction:column;gap:5px}.field.full{grid-column:1/-1}.field label{font-size:11px;color:#d2cadd;font-weight:800}.field input,.field select,.field textarea{width:100%;background:#0d0d15;color:white;border:1px solid #393548;border-radius:9px;padding:10px;outline:none}.field textarea{min-height:90px;resize:vertical}.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--violet)}.hint{font-size:11px;color:#9993a8}.drop{border:1px dashed #705397;border-radius:13px;padding:25px;text-align:center;background:#1b1625;color:#cfc5df}.drop input{max-width:100%;margin-top:12px}.filepreview{display:flex;gap:12px;align-items:center;margin-top:12px;color:var(--muted);font-size:12px}.gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px}.uploadcard{padding:0;overflow:hidden}.thumb{height:155px;background:#211a2c;display:grid;place-items:center;color:#a995c5;font-size:40px;overflow:hidden}.thumb img{width:100%;height:100%;object-fit:cover}.uploadbody{padding:14px}.uploadbody h3{font-size:15px;margin:0 0 4px}.uploadbody p{color:var(--muted);font-size:12px;margin:0 0 9px}.tag{display:inline-block;background:#30223f;color:#d7c6f4;border-radius:20px;padding:3px 8px;font-size:10px;margin:2px}.empty{border:1px dashed #50405f;border-radius:13px;padding:28px;color:var(--muted);text-align:center;grid-column:1/-1}.notice{border:1px solid #63502c;background:#282315;color:#e8d9ad;border-radius:11px;padding:12px;font-size:12px;margin:12px 0}.oc-list{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.oc-card h3{margin:0}.oc-card p{color:var(--muted);font-size:12px}.preview{position:sticky;top:90px;background:linear-gradient(155deg,#2b1a40,#171122 60%);border:1px solid #634486;border-radius:18px;padding:22px;overflow:hidden}.preview-top{display:flex;justify-content:space-between;color:var(--gold);font-size:10px;font-weight:900;letter-spacing:.14em}.avatar{width:76px;height:76px;border-radius:50%;margin:20px auto 10px;display:grid;place-items:center;font-size:32px;background:linear-gradient(135deg,#8655d6,#39234e);border:3px solid var(--gold)}.preview h2{text-align:center;margin:0}.preview .sub{text-align:center;color:var(--muted);font-size:12px}.preview-data{border-top:1px solid #51396b;margin-top:16px;padding-top:12px;display:grid;gap:7px}.preview-data div{display:flex;justify-content:space-between;gap:10px;font-size:12px}.preview-data span{color:var(--muted)}footer{border-top:1px solid var(--line);padding:22px 30px;color:#817c90;font-size:11px;text-align:center}.toast{position:fixed;right:20px;bottom:20px;background:#282039;border:1px solid #8b5cf6;color:white;padding:12px 16px;border-radius:10px;opacity:0;transform:translateY(8px);transition:.2s;z-index:20;pointer-events:none}.toast.show{opacity:1;transform:none}
+h1.title{font-size:34px;margin:0 0 4px}.intro{color:var(--muted);margin:0 0 20px}.toolbar{display:flex;gap:9px;flex-wrap:wrap;margin:15px 0}.toolbar input,.toolbar select,.control{background:#101019;color:white;border:1px solid var(--line);border-radius:9px;padding:10px 12px}.toolbar input{flex:1;min-width:180px}.upload-layout,.form-layout{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(270px,.85fr);gap:15px;align-items:start}.panel h2{margin:0 0 14px;font-size:18px}.fields{display:grid;grid-template-columns:1fr 1fr;gap:12px}.field{display:flex;flex-direction:column;gap:5px}.field.full{grid-column:1/-1}.field label{font-size:11px;color:#d2cadd;font-weight:800}.field input,.field select,.field textarea{width:100%;background:#0d0d15;color:white;border:1px solid #393548;border-radius:9px;padding:10px;outline:none}.field textarea{min-height:90px;resize:vertical}.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--violet)}.hint{font-size:11px;color:#9993a8}.drop{border:1px dashed #705397;border-radius:13px;padding:25px;text-align:center;background:#1b1625;color:#cfc5df}.drop input{max-width:100%;margin-top:12px}.filepreview{display:flex;gap:12px;align-items:center;margin-top:12px;color:var(--muted);font-size:12px}.gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px}.uploadcard{padding:0;overflow:hidden}.thumb{height:155px;background:#211a2c;display:grid;place-items:center;color:#a995c5;font-size:40px;overflow:hidden}.thumb img,.thumb video{width:100%;height:100%;object-fit:cover}.uploadbody{padding:14px}.uploadbody h3{font-size:15px;margin:0 0 4px}.uploadbody p{color:var(--muted);font-size:12px;margin:0 0 9px}.tag{display:inline-block;background:#30223f;color:#d7c6f4;border-radius:20px;padding:3px 8px;font-size:10px;margin:2px}.empty{border:1px dashed #50405f;border-radius:13px;padding:28px;color:var(--muted);text-align:center;grid-column:1/-1}.notice{border:1px solid #63502c;background:#282315;color:#e8d9ad;border-radius:11px;padding:12px;font-size:12px;margin:12px 0}.oc-list{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.oc-card h3{margin:0}.oc-card p{color:var(--muted);font-size:12px}.preview{position:sticky;top:90px;background:linear-gradient(155deg,#2b1a40,#171122 60%);border:1px solid #634486;border-radius:18px;padding:22px;overflow:hidden}.preview-top{display:flex;justify-content:space-between;color:var(--gold);font-size:10px;font-weight:900;letter-spacing:.14em}.avatar{width:76px;height:76px;border-radius:50%;margin:20px auto 10px;display:grid;place-items:center;font-size:32px;background:linear-gradient(135deg,#8655d6,#39234e);border:3px solid var(--gold)}.preview h2{text-align:center;margin:0}.preview .sub{text-align:center;color:var(--muted);font-size:12px}.preview-data{border-top:1px solid #51396b;margin-top:16px;padding-top:12px;display:grid;gap:7px}.preview-data div{display:flex;justify-content:space-between;gap:10px;font-size:12px}.preview-data span{color:var(--muted)}footer{border-top:1px solid var(--line);padding:22px 30px;color:#817c90;font-size:11px;text-align:center}.toast{position:fixed;right:20px;bottom:20px;background:#282039;border:1px solid #8b5cf6;color:white;padding:12px 16px;border-radius:10px;opacity:0;transform:translateY(8px);transition:.2s;z-index:20;pointer-events:none}.toast.show{opacity:1;transform:none}
 @media(max-width:1000px){.app{grid-template-columns:220px 1fr}.tiles,.gallery,.oc-list{grid-template-columns:repeat(2,1fr)}.stats{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:760px){.app{display:block}.side{position:fixed;z-index:30;left:-270px;top:0;width:260px;transition:.2s;box-shadow:20px 0 50px #0008}.side.open{left:0}.topbar{padding:0 16px}.hamb{display:inline-block;background:#201a2b;border:1px solid var(--line);color:white;border-radius:8px;padding:8px 10px}.mobilebrand{display:block;font-weight:900;letter-spacing:.1em}.content{padding:20px 15px}.upload-layout,.form-layout{grid-template-columns:1fr}.preview{position:static}}
 @media(max-width:520px){.tiles,.gallery,.oc-list{grid-template-columns:1fr}.fields{grid-template-columns:1fr}.field.full{grid-column:auto}.hero{padding:36px 23px}.stats{gap:8px}.stat{padding:12px}.topright .pill{display:none}}
+
+/* TVRU redesign layer */
+:root{--bg:#090914;--panel:#131321;--panel2:#1b1b2d;--line:#302d49;--purple:#986cff;--violet:#c5adff;--gold:#f2d083}
+body{background:radial-gradient(ellipse at 75% -15%,#42265d 0,transparent 40%),var(--bg)}
+.side{background:#0d0d18;border-color:var(--line)}
+.brandmark{background:linear-gradient(140deg,#c19cff,#5b35a6);box-shadow:0 8px 28px #8b5cf655}
+.navbtn{border-radius:12px;padding:11px 12px}.navbtn:hover,.navbtn.active{background:#2a203d}
+.topbar{background:#0e0e19ed;border-color:var(--line)}
+.hero{background:linear-gradient(110deg,#29183cf5,#141321ed 65%,#3a2450bb);border-color:#654b85;box-shadow:0 25px 75px #0006}
+.hero h1{letter-spacing:-.04em}.hero h1 span{color:#c4aaff}
+.btn{border-radius:11px;transition:.18s}.btn.primary{background:linear-gradient(130deg,#a47cff,#6841b7)}
+.stat,.panel,.tile,.uploadcard,.oc-card{background:linear-gradient(145deg,#1b1a2a,#12121e);border-color:#302d49}
+.tile{border-radius:17px}.tile:hover{border-color:#8a67c3;transform:translateY(-3px)}
+.field input,.field select,.field textarea,.toolbar input,.toolbar select{background:#0c0c16;border-color:#39364f}
+.drop{border:1px dashed #8763b5;background:#1b1628;border-radius:15px}
+.uploadcard{border-radius:17px;transition:.18s}.uploadcard:hover{transform:translateY(-3px);border-color:#70539d}
+.thumb{height:190px}.uploadbody{padding:16px}
+@media(max-width:760px){.side{box-shadow:20px 0 50px #0009}.hero{padding:38px 24px}}
+
+
+/* ===== TVRU / NEBULA INTERFACE ===== */
+:root{--bg:#080811;--panel:#12121f;--panel2:#1a192b;--line:#302b49;--purple:#9b72ff;--violet:#d4c2ff;--gold:#f2d083;--muted:#a9a4bb;--sidebar-collapsed:78px;--sidebar-expanded:276px}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{min-height:100vh;overflow-x:hidden;background:radial-gradient(ellipse at 82% -12%,#59327b55 0,transparent 38%),radial-gradient(ellipse at 5% 45%,#24215a44 0,transparent 34%),#080811}
+body:before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.22;background-image:linear-gradient(#ffffff08 1px,transparent 1px),linear-gradient(90deg,#ffffff08 1px,transparent 1px);background-size:48px 48px;mask-image:linear-gradient(to bottom,black,transparent 85%)}
+body:after{content:"";position:fixed;width:440px;height:440px;right:-180px;top:24%;z-index:-1;pointer-events:none;border-radius:50%;background:#814dff18;filter:blur(85px);animation:ambientDrift 15s ease-in-out infinite alternate}
+@keyframes ambientDrift{from{transform:translate3d(0,-35px,0) scale(.9)}to{transform:translate3d(-100px,55px,0) scale(1.2)}}
+@keyframes pageEnter{from{opacity:0;transform:translateY(13px)}to{opacity:1;transform:translateY(0)}}
+@keyframes floatGlow{0%,100%{transform:translate(0,0)}50%{transform:translate(-18px,14px)}}
+@keyframes shimmer{0%{background-position:0% 50%}100%{background-position:200% 50%}}
+*{scrollbar-color:#51416e #10101b;scrollbar-width:thin}
+.app{display:block;min-height:100vh}
+.side{position:fixed;z-index:40;inset:0 auto 0 0;width:var(--sidebar-collapsed);height:100dvh;padding:18px 12px 16px;overflow-x:hidden;overflow-y:auto;background:rgba(12,12,22,.91);border-right:1px solid #39304f;backdrop-filter:blur(22px);box-shadow:14px 0 55px #0003;transition:width .32s cubic-bezier(.2,.8,.2,1),padding .32s;white-space:nowrap}
+.side:hover,.side:focus-within{width:var(--sidebar-expanded);padding-inline:14px;box-shadow:18px 0 70px #0008,0 0 45px #8d61ff12}
+.brand{height:56px;padding:4px 5px 18px;gap:12px;overflow:hidden}
+.brandmark{flex:0 0 44px;width:44px;height:44px;border-radius:15px;background:linear-gradient(145deg,#d2b7ff,#7146d4 60%,#3e286f);box-shadow:0 8px 32px #986cff55,0 0 0 1px #ffffff26 inset}
+.brand>span:nth-child(2){opacity:0;transform:translateX(-8px);transition:.22s;pointer-events:none}
+.side:hover .brand>span:nth-child(2),.side:focus-within .brand>span:nth-child(2){opacity:1;transform:none}
+.brand b{font-size:12px;letter-spacing:.11em}.brand small{font-size:9px}
+.navlabel{height:31px;padding:14px 11px 5px;overflow:hidden;color:#77718d;transition:opacity .2s}
+.navlabel span{opacity:0;transition:opacity .2s}.side:hover .navlabel span,.side:focus-within .navlabel span{opacity:1}
+.navbtn{position:relative;height:46px;min-width:50px;margin:4px 0;padding:0 13px;gap:14px;border:1px solid transparent;border-radius:13px;color:#b9b4ca;font-size:13px;overflow:hidden;transition:background .2s,border-color .2s,color .2s,transform .2s}
+.navbtn .ico{flex:0 0 22px;width:22px;font-size:18px;text-align:center;filter:saturate(.85)}
+.navtext{opacity:0;transform:translateX(-7px);transition:opacity .18s,transform .18s;pointer-events:none}
+.side:hover .navtext,.side:focus-within .navtext{opacity:1;transform:none}
+.navbtn:hover{background:#ffffff0c;border-color:#ffffff12;transform:translateX(2px)}
+.navbtn.active{background:linear-gradient(100deg,#8e61ed30,#ffffff08);border-color:#a783f044;color:#fff;box-shadow:inset 3px 0 #b99aff,0 6px 22px #0002}
+.sidebottom{margin-top:18px;padding:15px 5px 5px;border-top:1px solid #ffffff12;white-space:normal;opacity:.95}
+.sidebottom{font-size:0}.sidebottom:before{content:"✦";display:block;width:46px;height:40px;line-height:40px;text-align:center;font-size:18px;color:#d4c2ff}
+.sidebottom .discord,.sidebottom>span{display:none}
+.side:hover .sidebottom,.side:focus-within .sidebottom{font-size:11px;padding-inline:10px}
+.side:hover .sidebottom:before,.side:focus-within .sidebottom:before{display:none}
+.side:hover .sidebottom .discord,.side:focus-within .sidebottom .discord{display:block}
+.side:hover .sidebottom>span,.side:focus-within .sidebottom>span{display:block}
+.discord{border-radius:12px;box-shadow:0 8px 24px #7046cb33;transition:transform .2s,filter .2s}.discord:hover{transform:translateY(-2px);filter:brightness(1.12)}
+.main{min-width:0;margin-left:var(--sidebar-collapsed);transition:margin-left .3s}
+.topbar{height:76px;padding:0 clamp(18px,3vw,42px);background:#0c0c16c9;border-bottom:1px solid #ffffff13;backdrop-filter:blur(22px);box-shadow:0 8px 35px #0002}
+.crumb{font-size:12px;letter-spacing:.04em}.topright{gap:10px}
+.pill{background:#ffffff08;border-color:#ffffff16;color:#d7d0e7;padding:8px 13px}
+.content{max-width:1560px;padding:clamp(20px,3vw,42px)}
+.page.active{animation:pageEnter .42s cubic-bezier(.2,.8,.2,1) both}
+.hero{min-height:340px;padding:clamp(38px,5vw,68px);border-radius:28px;border:1px solid #a987e044;background:linear-gradient(112deg,#211630f5 0%,#151321f2 54%,#38214fdf 100%);box-shadow:0 30px 90px #0006,inset 0 1px #ffffff18;isolation:isolate}
+.hero:before{content:"";position:absolute;z-index:-1;width:360px;height:360px;right:7%;top:-42%;border-radius:50%;background:radial-gradient(circle,#a77aff4a,transparent 68%);filter:blur(10px);animation:floatGlow 8s ease-in-out infinite}
+.hero:after{right:3%;bottom:-78px;color:#ffffff09;font-size:clamp(125px,19vw,270px);text-shadow:0 0 70px #b58cff10}
+.eyebrow{display:inline-flex;align-items:center;gap:9px;color:#e7d7ff;letter-spacing:.2em}
+.eyebrow:before{content:"";width:24px;height:1px;background:var(--gold);box-shadow:0 0 12px var(--gold)}
+.hero h1{font-size:clamp(42px,5.5vw,76px);line-height:.98;letter-spacing:-.055em;margin:18px 0}
+.hero h1 span{background:linear-gradient(100deg,#d9c5ff,#9f7aff,#f0d6a0,#c9aaff);background-size:200% auto;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shimmer 9s linear infinite}
+.hero p{color:#d1c9e0;font-size:clamp(14px,1.3vw,17px);max-width:650px}
+.btn{position:relative;overflow:hidden;border-radius:12px;border-color:#ffffff20;background:#ffffff0b;padding:11px 16px;transition:transform .2s,box-shadow .2s,border-color .2s,filter .2s}
+.btn:before{content:"";position:absolute;inset:0;transform:translateX(-120%);background:linear-gradient(100deg,transparent,#ffffff20,transparent);transition:transform .55s;pointer-events:none}
+.btn:hover:before{transform:translateX(120%)}.btn:hover{transform:translateY(-2px);border-color:#b99aff66;box-shadow:0 9px 24px #0004}
+.btn.primary{background:linear-gradient(120deg,#a77aff,#7048cb 65%,#5934a5);border-color:#c6aaff66;box-shadow:0 8px 28px #8856df35}
+.btn.gold{background:linear-gradient(120deg,#f4dc9f,#c39449);box-shadow:0 8px 24px #d4a95022}
+.stats{gap:14px;margin:22px 0 38px}
+.stat{position:relative;overflow:hidden;min-height:108px;padding:19px 20px;border-radius:18px;background:linear-gradient(145deg,#1b192b,#11111d);box-shadow:0 12px 32px #0002;transition:transform .25s,border-color .25s}
+.stat:after{content:"";position:absolute;width:90px;height:90px;right:-35px;top:-38px;border-radius:50%;background:#9c73ff16;filter:blur(2px)}
+.stat:hover{transform:translateY(-4px);border-color:#9b79d966}.stat strong{font-size:26px;color:#e8d6a5;letter-spacing:-.03em}.stat span{font-size:11px;letter-spacing:.04em}
+.sectionhead{margin:34px 0 16px}.sectionhead h2{font-size:23px;letter-spacing:-.025em}.sectionhead p{font-size:12px}
+.tiles{gap:15px}.tile{position:relative;overflow:hidden;min-height:156px;padding:20px;border-radius:19px;background:linear-gradient(145deg,#1c1a2c,#11111d);box-shadow:0 12px 30px #0002;transition:transform .25s,border-color .25s,box-shadow .25s}
+.tile:after{content:"";position:absolute;width:130px;height:130px;right:-65px;bottom:-75px;border-radius:50%;background:#9c73ff1c;filter:blur(4px);transition:transform .3s}
+.tile:hover{transform:translateY(-5px);border-color:#a988ec77;box-shadow:0 18px 42px #0005}.tile:hover:after{transform:scale(1.7)}
+.tile .tileico{width:44px;height:44px;border:1px solid #c2a2ff22;background:linear-gradient(145deg,#49336b,#241d38);box-shadow:0 7px 20px #0003;border-radius:14px}
+.tile h3{font-size:15px}.tile p{line-height:1.65}
+h1.title,.page-title{font-size:clamp(28px,3vw,38px);letter-spacing:-.04em;margin:0 0 5px}.intro{font-size:13px;line-height:1.7;max-width:850px}
+.panel,.form-card,.preview,.oc-card{border:1px solid #ffffff13;border-radius:19px;background:linear-gradient(145deg,#1a192a,#11111c);box-shadow:0 14px 42px #0003}
+.panel{padding:21px}.panel h2{letter-spacing:-.02em}
+.toolbar input,.toolbar select,.field input,.field select,.field textarea{border:1px solid #ffffff18;border-radius:11px;background:#0c0c16;color:#f5f1ff;transition:border-color .2s,box-shadow .2s}
+.toolbar input:focus,.toolbar select:focus,.field input:focus,.field select:focus,.field textarea:focus{border-color:#a989ed;box-shadow:0 0 0 3px #9a72ff1c;outline:none}
+.drop{border:1px dashed #a080d6;background:linear-gradient(145deg,#20182e,#141321);border-radius:16px;padding:30px;transition:border-color .2s,background .2s,transform .2s}.drop.dragover{border-color:#d0b8ff;background:#32234a;transform:scale(1.01)}
+.gallery{gap:16px}.uploadcard{border-radius:18px;background:linear-gradient(145deg,#1b1a2b,#11111d);box-shadow:0 12px 32px #0003;transition:transform .25s,border-color .25s,box-shadow .25s}.uploadcard:hover{transform:translateY(-5px);border-color:#a988ec77;box-shadow:0 20px 45px #0006}.thumb{height:205px;background:radial-gradient(circle at 50% 35%,#483363,#1a1727 70%);color:#c4a6ff}.uploadbody h3{font-size:16px;letter-spacing:-.015em}.uploadbody p{line-height:1.65}
+.tag{border:1px solid #ffffff12;background:#ffffff0b;color:#d8c9f4;padding:4px 9px}
+.empty{border-color:#ffffff22;background:#ffffff04;border-radius:16px}
+.notice{border-radius:13px;background:#292316;border-color:#8a713b;color:#f0dfb5}
+.preview{top:94px}.avatar{box-shadow:0 0 0 7px #ffffff08,0 10px 28px #0004}
+.toast{border-radius:13px;box-shadow:0 15px 45px #0008;backdrop-filter:blur(15px)}
+footer{margin-top:24px;border-color:#ffffff12;color:#817c96}
+#accountArea{display:flex;align-items:center;gap:8px}
+#accountArea .btn{padding:8px 11px;font-size:11px}
+/* Sidebar hover expansion on desktop; tap-to-open on small screens. */
+@media(min-width:761px){.side:hover,.side:focus-within{width:var(--sidebar-expanded)}.hamb{display:none!important}}
+@media(max-width:760px){.side{width:276px;left:-290px;right:auto;top:0;bottom:0;height:100dvh;padding:18px 14px;transition:left .28s cubic-bezier(.2,.8,.2,1);box-shadow:20px 0 60px #0009}.side.open{left:0;width:276px}.side .brand>span:nth-child(2),.side .navlabel span,.side .navtext{opacity:1;transform:none}.side .sidebottom{font-size:11px;padding-inline:10px}.side .sidebottom:before{display:none}.side .sidebottom .discord,.side .sidebottom>span{display:block}.main{margin-left:0}.topbar{height:66px;padding:0 15px}.hamb{display:inline-block}.mobilebrand{font-size:11px}.crumb{display:none}.content{padding:22px 15px}.hero{min-height:unset;padding:38px 24px}.stats{grid-template-columns:repeat(2,minmax(0,1fr))}.upload-layout,.form-layout{grid-template-columns:1fr}.preview{position:static}}
+@media(max-width:520px){.stats{grid-template-columns:repeat(2,minmax(0,1fr))}.stat{min-height:90px}.stat strong{font-size:22px}.tiles,.gallery,.oc-list{grid-template-columns:1fr}.sectionhead{align-items:start;flex-direction:column}.topright .pill:first-child{display:none}.hero h1{font-size:clamp(38px,12vw,54px)}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
+
 </style></head><body>
 <div class="app">
 <aside class="side" id="sidebar"><a class="brand" href="#" onclick="showPage('home');return false"><span class="brandmark">TV</span><span><b>THE VOICE RP UNIVERSE</b><small>COMMUNITY NETWORK</small></span></a>
-<div class="navlabel">Main hub</div>
-<button class="navbtn active" data-page="home" onclick="showPage('home')"><span class="ico">⌂</span>Overview</button>
-<button class="navbtn" data-page="upload" onclick="showPage('upload')"><span class="ico">＋</span>Upload Center</button>
-<button class="navbtn" data-page="library" onclick="showPage('library')"><span class="ico">▦</span>Community Library</button>
-<button class="navbtn" data-page="create" onclick="showPage('create')"><span class="ico">✦</span>RP Character Creator</button>
-<button class="navbtn" data-page="vault" onclick="showPage('vault')"><span class="ico">♙</span>OC Vault</button>
-<div class="navlabel">RP stuff</div>
-<button class="navbtn" data-page="characters" onclick="showPage('characters')"><span class="ico">👉</span>Characters & Lore</button>
-<button class="navbtn" data-page="info" onclick="showPage('info')"><span class="ico">📌</span>Information Hub</button>
-<button class="navbtn" data-page="items" onclick="showPage('items')"><span class="ico">🗝️</span>Lore Items</button>
-<button class="navbtn" data-page="cars" onclick="showPage('cars')"><span class="ico">🚘</span>Car Info Dump</button>
-<button class="navbtn" data-page="portraits" onclick="showPage('portraits')"><span class="ico">👤</span>Character Pictures</button>
-<div class="navlabel">Random / creative</div>
-<button class="navbtn" data-page="media" onclick="showPage('media')"><span class="ico">🖼️</span>Media</button>
-<button class="navbtn" data-page="comics" onclick="showPage('comics')"><span class="ico">📱</span>Comics</button>
-<button class="navbtn" data-page="art" onclick="showPage('art')"><span class="ico">🎨</span>Post Your Art</button>
-<button class="navbtn" data-page="nfs" onclick="showPage('nfs')"><span class="ico">🏎️</span>NFS Zone</button>
-<button class="navbtn" data-page="minecraft" onclick="showPage('minecraft')"><span class="ico">🌳</span>Minecraft</button>
-<button class="navbtn" data-page="horror" onclick="showPage('horror')"><span class="ico">👻</span>Horror Games</button>
-<button class="navbtn" data-page="bendy" onclick="showPage('bendy')"><span class="ico">🟡</span>Bendy Hell</button>
-<button class="navbtn" data-page="undertale" onclick="showPage('undertale')"><span class="ico">💜</span>Undertale & Deltarune</button>
-<button class="navbtn" data-page="fallout" onclick="showPage('fallout')"><span class="ico">☢️</span>Fallout</button>
+<div class="navlabel"><span>Main hub</span></div>
+<button class="navbtn active" data-page="home" onclick="showPage('home')"><span class="ico">⌂</span><span class="navtext">Overview</span></button>
+<button class="navbtn" data-page="upload" onclick="showPage('upload')"><span class="ico">＋</span><span class="navtext">Upload Center</span></button>
+<button class="navbtn" data-page="library" onclick="showPage('library')"><span class="ico">▦</span><span class="navtext">Community Library</span></button>
+<button class="navbtn" data-page="create" onclick="showPage('create')"><span class="ico">✦</span><span class="navtext">RP Character Creator</span></button>
+<button class="navbtn" data-page="vault" onclick="showPage('vault')"><span class="ico">♙</span><span class="navtext">OC Vault</span></button>
+<div class="navlabel"><span>RP stuff</span></div>
+<button class="navbtn" data-page="characters" onclick="showPage('characters')"><span class="ico">👉</span><span class="navtext">Characters & Lore</span></button>
+<button class="navbtn" data-page="info" onclick="showPage('info')"><span class="ico">📌</span><span class="navtext">Information Hub</span></button>
+<button class="navbtn" data-page="items" onclick="showPage('items')"><span class="ico">🗝️</span><span class="navtext">Lore Items</span></button>
+<button class="navbtn" data-page="cars" onclick="showPage('cars')"><span class="ico">🚘</span><span class="navtext">Car Info Dump</span></button>
+<button class="navbtn" data-page="portraits" onclick="showPage('portraits')"><span class="ico">👤</span><span class="navtext">Character Pictures</span></button>
+<div class="navlabel"><span>Random / creative</span></div>
+<button class="navbtn" data-page="media" onclick="showPage('media')"><span class="ico">🖼️</span><span class="navtext">Media</span></button>
+<button class="navbtn" data-page="comics" onclick="showPage('comics')"><span class="ico">📱</span><span class="navtext">Comics</span></button>
+<button class="navbtn" data-page="art" onclick="showPage('art')"><span class="ico">🎨</span><span class="navtext">Post Your Art</span></button>
+<button class="navbtn" data-page="nfs" onclick="showPage('nfs')"><span class="ico">🏎️</span><span class="navtext">NFS Zone</span></button>
+<button class="navbtn" data-page="minecraft" onclick="showPage('minecraft')"><span class="ico">🌳</span><span class="navtext">Minecraft</span></button>
+<button class="navbtn" data-page="horror" onclick="showPage('horror')"><span class="ico">👻</span><span class="navtext">Horror Games</span></button>
+<button class="navbtn" data-page="bendy" onclick="showPage('bendy')"><span class="ico">🟡</span><span class="navtext">Bendy Hell</span></button>
+<button class="navbtn" data-page="undertale" onclick="showPage('undertale')"><span class="ico">💜</span><span class="navtext">Undertale & Deltarune</span></button>
+<button class="navbtn" data-page="fallout" onclick="showPage('fallout')"><span class="ico">☢️</span><span class="navtext">Fallout</span></button>
 <div class="sidebottom">TVRU COMMUNITY SPACE<a class="discord" href="https://discord.gg/5AejXzyDG" target="_blank" rel="noopener">Join the Discord ↗</a><span>Share respectfully. Keep uploads appropriate and credit creators.</span></div></aside>
-<div class="main"><header class="topbar"><div style="display:flex;align-items:center;gap:12px"><button class="hamb" onclick="toggleSide()">☰</button><span class="mobilebrand">TVRU / COMMUNITY</span><span class="crumb" id="crumb">Community overview</span></div><div class="topright"><span class="pill">✦ Creative community</span><span class="pill">Public gallery · GitHub storage</span></div></header>
+<div class="main"><header class="topbar"><div style="display:flex;align-items:center;gap:12px"><button class="hamb" onclick="toggleSide()">☰</button><span class="mobilebrand">TVRU / COMMUNITY</span><span class="crumb" id="crumb">Community overview</span></div><div class="topright"><span class="pill">✦ Creative community</span><span class="pill" id="accountArea"><button class="btn primary" onclick="openLogin()">Log in</button></span></div></header>
 <main class="content">
 <section class="page active" id="home"><div class="hero"><div class="eyebrow">WELCOME TO THE VOICE RP UNIVERSE</div><h1>YOUR UNIVERSE.<br><span>YOUR COMMUNITY.</span></h1><p>A shared home for roleplay characters, lore, vehicles, builds, art, comics, game fandoms, and community uploads. Make something, give it a title, and add it to the library.</p><div class="actions"><button class="btn primary" onclick="showPage('upload')">＋ Share something</button><button class="btn" onclick="showPage('create')">✦ Create an RP character</button><a class="btn" style="text-decoration:none" href="https://discord.gg/5AejXzyDG" target="_blank" rel="noopener">Join Discord ↗</a></div></div>
 <div class="stats"><div class="stat"><strong id="statUploads">0</strong><span>Community uploads</span></div><div class="stat"><strong>17</strong><span>Dedicated community sections</span></div><div class="stat"><strong>∞</strong><span>Stories to create</span></div><div class="stat"><strong>TVRU</strong><span>Create · Connect · Imagine</span></div></div>
 <div class="sectionhead"><div><h2>Explore the community</h2><p>Jump into one of the dedicated spaces.</p></div><button class="btn" onclick="showPage('library')">Browse library →</button></div><div class="tiles" id="homeTiles"></div>
 </section>
-<section class="page" id="upload"><h1 class="title">Upload Center</h1><p class="intro">Share a file with a clear title, description, and category. Images display as gallery cards; other files appear as downloadable attachments.</p>
-<div class="notice"><b>Community cloud storage:</b> Uploads are saved to the TVRU GitHub repository and can be viewed by everyone. Files must be 8 MB or smaller. Never upload private information or files you do not have permission to share. Submissions appear publicly, so only upload content you are allowed to share.</div>
+<section class="page" id="upload"><h1 class="title">Upload Center</h1><p class="intro">Share a file with a clear title, description, and category. Attach multiple images, videos, and other files to a single community post.</p>
+<div class="notice"><b>Community cloud storage:</b> Uploads are stored by the TVRU cloud service. Multiple images, videos, and resource files can be attached to one post. Server limits apply. Never upload private information or files you do not have permission to share. Submissions appear publicly, so only upload content you are allowed to share.</div>
 <div class="upload-layout"><div class="panel"><h2>New community submission</h2><form id="uploadForm"><div class="fields">
 <div class="field full"><label for="upTitle">Title *</label><input id="upTitle" maxlength="80" required placeholder="Give your upload a name"></div>
 <div class="field"><label for="upCategory">Category *</label><select id="upCategory" required></select></div>
 <div class="field"><label for="upCreator">Creator / display name</label><input id="upCreator" maxlength="40" placeholder="Your community name"></div>
 <div class="field full"><label for="upDesc">Description</label><textarea id="upDesc" maxlength="500" placeholder="What is it? Add context, credits, version info, or details..."></textarea></div>
 <div class="field full"><label for="upTags">Tags (comma separated)</label><input id="upTags" maxlength="120" placeholder="e.g. character, concept art, WIP"></div>
-<div class="field full"><label>Choose a file *</label><div class="drop">Drop a file here or browse from your device<br><input id="upFile" type="file" required accept=".png,.jpg,.jpeg,.webp,.gif,.pdf,.txt,.md,.json,.xml,.ini,.cfg,.zip,.7z,.rar,.yft,.ytd,.ydd,.ymt,.ydr,.ymap,.meta,.dds"></div><div class="hint" id="fileHint">Images, documents, archives, and supported game files. Maximum 8 MB.</div></div>
+<div class="field full"><label>Choose a file *</label><div class="drop">Drop a file here or browse from your device<br><input id="upFile" type="file" multiple required accept="image/*,video/*,.pdf,.txt,.md,.json,.xml,.ini,.cfg,.zip,.7z,.rar,.yft,.ytd,.ydd,.ymt,.ydr,.ymap,.meta,.dds"></div><div class="hint" id="fileHint">Up to 15 files per post · 100 MB per file · 300 MB total.</div></div>
 <div class="field full"><label><input type="checkbox" id="upCredit" required> I have permission to share this file and have credited its creator where required.</label></div>
 </div><div class="actions"><button class="btn primary" type="submit">Submit upload</button><button class="btn" type="reset">Clear form</button></div></form></div>
 <aside class="panel"><h2>Submission checklist</h2><p class="muted">Help everyone find and understand your work.</p><ul class="muted"><li>Use a descriptive title.</li><li>Choose the closest matching category.</li><li>Include credits and version details.</li><li>Do not upload personal or confidential information.</li><li>Only share files you have permission to distribute.</li></ul><div class="notice">Community submissions are stored in the shared repository and appear in the public library. Do not submit private or restricted files.</div></aside></div></section>
 <section class="page" id="library"><h1 class="title">Community Library</h1><p class="intro">Discover artwork, RP resources, files, builds, and posts shared by members.</p><div class="toolbar"><input id="libSearch" placeholder="Search titles, descriptions, tags..." oninput="renderLibrary()"><select id="libFilter" onchange="renderLibrary()"><option value="">All categories</option></select><select id="libSort" onchange="renderLibrary()"><option value="new">Newest first</option><option value="old">Oldest first</option><option value="az">Title A–Z</option></select></div><div class="gallery" id="gallery"></div></section>
-<section class="page" id="create"><section class="page" id="create">
+<section class="page" id="create">
 <h1 class="page-title">Create Your RP OC</h1><p class="intro">Make an original character profile. Build a detailed character sheet. Your private draft stays in this browser until you choose to export it.</p>
 <div class="form-layout"><div class="form-card">
 <h2>Character Details</h2><form id="ocForm" onsubmit="saveOC(event)"><div class="fields">
@@ -73,7 +178,7 @@ h1.title{font-size:34px;margin:0 0 4px}.intro{color:var(--muted);margin:0 0 20px
 </div><div class="actions"><button class="btn primary" type="submit">Save character</button><button class="btn" type="button" onclick="randomizeOC()">Surprise me ✨</button><button class="btn" type="button" onclick="resetForm()">Clear form</button></div><p class="hint">* Saved characters are private to this browser in this version. Cloud publishing can be connected with Supabase.</p></form>
 </div>
 <aside class="preview"><div class="preview-top"><span>LIVE PROFILE PREVIEW</span><span>TVRU / OC</span></div><div class="avatar" id="previewAvatar">✦</div><h2 id="previewName">Your character</h2><div class="sub" id="previewRole">Role / occupation</div><div class="preview-data"><div><span>Age</span><b id="previewAge">—</b></div><div><span>Pronouns</span><b id="previewPronouns">—</b></div><div><span>Species</span><b id="previewSpecies">—</b></div><div><span>Universe</span><b id="previewUniverse">—</b></div><div><span>Personality</span><b id="previewPersonality">—</b></div></div></aside></div>
-</section></section>
+</section>
 <section class="page" id="vault"><h1 class="title">Your OC Vault</h1><p class="intro">Characters saved in this browser. Export profiles to share them.</p><div class="toolbar"><input id="searchOC" placeholder="Search characters..." oninput="renderVault()"><button class="btn" onclick="exportAll()">Export all JSON</button><button class="btn primary" onclick="showPage('create')">＋ New character</button></div><div id="ocList" class="oc-list"></div></section>
 <section class="page" id="characters"><h1 class="title">Characters & Lore</h1><p class="intro">Character histories, relationships, story arcs, timelines, and universe notes.</p><div class="tiles" id="loreTiles"></div><div class="panel" style="margin-top:15px"><h2>Quick lore notebook</h2><div class="fields"><div class="field"><label>Note title</label><input id="loreTitle" placeholder="The old observatory"></div><div class="field full"><label>Lore note</label><textarea id="loreText" placeholder="Write a setting detail, event, item, or story idea..."></textarea></div></div><button class="btn primary" style="margin-top:12px" onclick="saveLore()">Save note</button><p class="hint" id="loreSaved">Notes are stored in this browser.</p></div></section>
 <section class="page" id="info"><h1 class="title">Information Hub</h1><p class="intro">Important community references, guidelines, announcements, and helpful links.</p><div class="tiles"><article class="tile"><div class="tileico">📌</div><h3>Community guidelines</h3><p>Be respectful, credit creators, keep content appropriate, and follow moderator directions.</p></article><article class="tile"><div class="tileico">📣</div><h3>Announcements</h3><p>Use the Discord information hub for official updates and event notices.</p></article><article class="tile"><div class="tileico">🧭</div><h3>Getting started</h3><p>Create an OC, read the lore, and introduce your creative work to the community.</p></article></div></section>
@@ -90,6 +195,18 @@ h1.title{font-size:34px;margin:0 0 4px}.intro{color:var(--muted);margin:0 0 20px
 <section class="page" id="undertale"><h1 class="title">Undertale & Deltarune</h1><p class="intro">Fan art, AU concepts, theories, music discussion, and character projects.</p><button class="btn primary" onclick="newUpload('Undertale & Deltarune')">＋ Share fan content</button><div class="gallery" id="cat-undertale"></div></section>
 <section class="page" id="fallout"><h1 class="title">Fallout</h1><p class="intro">Wasteland builds, character concepts, screenshots, lore notes, and fan creations.</p><button class="btn primary" onclick="newUpload('Fallout')">＋ Share Fallout content</button><div class="gallery" id="cat-fallout"></div></section>
 </main><footer>THE VOICE RP UNIVERSE · CREATE · CONNECT · IMAGINE<br>Community uploads are stored in the TVRU GitHub repository and shared through the public library.</footer></div></div>
+
+<div class="modalback" id="loginModal" style="display:none;position:fixed;inset:0;background:#05050bdc;z-index:60;place-items:center;padding:18px">
+ <div class="panel" style="width:min(430px,100%);padding:24px;background:#171725;border-color:#594477">
+  <h2 id="loginHeading">Log in to TVRU</h2><p class="muted">Member accounts and staff permissions are handled by the secure server.</p>
+  <form id="loginForm"><div class="field"><label>Email</label><input id="loginEmail" type="email" required autocomplete="email"></div>
+  <div class="field" style="margin-top:12px"><label>Password</label><input id="loginPassword" type="password" required minlength="10" autocomplete="current-password"></div>
+  <div class="field" id="registerNameField" style="display:none;margin-top:12px"><label>Display name</label><input id="registerName" maxlength="40"></div>
+  <div class="actions"><button class="btn primary" type="submit">Continue</button><button class="btn" type="button" onclick="closeLogin()">Cancel</button></div></form>
+  <p class="hint" id="loginSwitch">Need an account? <a href="#" onclick="switchAuth(true);return false">Register</a></p>
+ </div>
+</div>
+
 <div class="toast" id="toast"></div>
 <script>
 const DISCORD_URL='https://discord.gg/5AejXzyDG';
@@ -127,29 +244,48 @@ function renderTiles(){document.getElementById('homeTiles').innerHTML=pageCats.m
 function initCategories(){let opts=cats.map(c=>`<option>${c[0]}</option>`).join('');document.getElementById('upCategory').innerHTML=opts;document.getElementById('libFilter').innerHTML='<option value="">All categories</option>'+opts}
 function newUpload(category){showPage('upload');document.getElementById('upCategory').value=category;document.getElementById('upTitle').focus()}
 function renderLibrary(){let q=(document.getElementById('libSearch')?.value||'').toLowerCase(),cat=document.getElementById('libFilter')?.value||'',sort=document.getElementById('libSort')?.value||'new';let items=getUploads().filter(x=>(!cat||x.category===cat)&&(`${x.title} ${x.description} ${x.creator} ${(x.tags||[]).join(' ')}`).toLowerCase().includes(q));items.sort((a,b)=>sort==='az'?a.title.localeCompare(b.title):sort==='old'?a.created.localeCompare(b.created):b.created.localeCompare(a.created));document.getElementById('gallery').innerHTML=items.length?items.map(uploadCard).join(''):'<div class="empty">Nothing here yet. Be the first to share something with the community.</div>'}
-function uploadCard(x){let preview=x.type?.startsWith('image/')?`<img src="${esc(x.data)}" alt="${esc(x.title)}">`:fileIcon(x.filename||'file');return `<article class="uploadcard"><div class="thumb">${preview}</div><div class="uploadbody"><h3>${esc(x.title)}</h3><p>${esc(x.description||'No description provided.')}</p><span class="tag">${esc(x.category)}</span><span class="tag">by ${esc(x.creator||'Community member')}</span><div class="hint" style="margin-top:8px">${esc((x.tags||[]).map(t=>'#'+t).join(' '))}</div><div class="actions"><a class="btn" style="text-decoration:none;font-size:11px" href="${esc(x.data)}" target="_blank" rel="noopener">Open / Download</a></div></div></article>`}
+function uploadCard(x){let f=(x.files||[])[0]||x;let preview=f.type?.startsWith('image/')?`<img src="${esc(f.url||f.data)}" alt="${esc(x.title)}">`:f.type?.startsWith('video/')?`<video src="${esc(f.url)}" controls muted></video>`:fileIcon(f.name||f.filename||'file');return `<article class="uploadcard"><div class="thumb">${preview}</div><div class="uploadbody"><h3>${esc(x.title)}</h3><p>${esc(x.description||'No description provided.')}</p><span class="tag">${esc(x.category)}</span><span class="tag">by ${esc(x.creator||'Community member')}</span><div class="hint" style="margin-top:8px">${esc((x.tags||[]).map(t=>'#'+t).join(' '))}</div><div class="actions"><a class="btn" style="text-decoration:none;font-size:11px" href="${esc((x.files&&x.files[0]&&x.files[0].url)||x.data)}" target="_blank" rel="noopener">Open / Download</a></div></div></article>`}
 function renderCategory(id,category){let root=document.getElementById('cat-'+id);if(!root)return;let items=getUploads().filter(x=>x.category===category);root.innerHTML=items.length?items.map(uploadCard).join(''):'<div class="empty">No submissions in this section yet. Use the upload button to add the first one.</div>'}
+const uploadInput=document.getElementById('upFile');
+const dropZone=document.querySelector('.drop');
+function updateFileHint(){
+  const selected=Array.from(uploadInput.files||[]);
+  const hint=document.getElementById('fileHint');
+  if(!selected.length){hint.textContent='Up to 15 files per post · 100 MB per file · 300 MB total.';return;}
+  const total=selected.reduce((n,f)=>n+f.size,0);
+  const mb=n=>(n/1024/1024).toFixed(1)+' MB';
+  hint.textContent=`${selected.length} file(s) selected · ${mb(total)} total · ${selected.map(f=>f.name).join(', ')}`;
+}
+uploadInput.addEventListener('change',updateFileHint);
+['dragenter','dragover'].forEach(type=>dropZone.addEventListener(type,e=>{e.preventDefault();dropZone.classList.add('dragover')}));
+['dragleave','drop'].forEach(type=>dropZone.addEventListener(type,e=>{e.preventDefault();dropZone.classList.remove('dragover')}));
+dropZone.addEventListener('drop',e=>{if(e.dataTransfer?.files?.length){uploadInput.files=e.dataTransfer.files;updateFileHint()}});
+document.getElementById('uploadForm').addEventListener('reset',()=>setTimeout(updateFileHint,0));
 document.getElementById('uploadForm').addEventListener('submit',async e=>{
   e.preventDefault();
   const form=e.currentTarget;
-  const file=document.getElementById('upFile').files[0];
-  if(!file){toast('Please choose a file.');return;}
-  if(file.size>8*1024*1024){toast('Files must be 8 MB or smaller.');return;}
+  const files=Array.from(uploadInput.files||[]);
+  if(!files.length){toast('Please choose at least one file.');return;}
+  if(files.length>15){toast('A post can contain up to 15 files.');return;}
+  if(files.some(file=>file.size>100*1024*1024)){toast('Each file must be 100 MB or smaller.');return;}
+  const totalBytes=files.reduce((total,file)=>total+file.size,0);
+  if(totalBytes>300*1024*1024){toast('The total upload size cannot exceed 300 MB.');return;}
   const submitButton=form.querySelector('button[type="submit"]');
   submitButton.disabled=true;
   submitButton.textContent='Uploading...';
   try{
     const data=new FormData();
-    data.append('file',file);
+    files.forEach(file=>data.append('files',file,file.name));
     data.append('title',val('upTitle'));
     data.append('category',val('upCategory'));
     data.append('creator',val('upCreator')||'Community member');
     data.append('description',val('upDesc'));
     data.append('tags',val('upTags'));
-    const response=await fetch(UPLOAD_API,{method:'POST',body:data});
+    const response=await fetch(`${UPLOAD_API}/posts`,{method:'POST',body:data,credentials:'include'});
     const result=await response.json();
     if(!response.ok||!result.success) throw new Error(result.error||'Upload failed.');
     form.reset();
+    updateFileHint();
     await loadUploads();
     toast('Upload saved to the TVRU Community Library!');
     showPage('library');
@@ -175,5 +311,26 @@ function downloadOC(id){let o=getOCs().find(x=>x.id===id);if(o)downloadFile((o.n
 function exportAll(){downloadFile('tvru-character-vault.json',JSON.stringify(getOCs(),null,2),'application/json')}
 function deleteOC(id){if(!confirm('Delete this character from your local vault?'))return;setOCs(getOCs().filter(o=>o.id!==id));renderVault();toast('Character deleted.')}
 function saveLore(){let title=val('loreTitle'),body=val('loreText');if(!title&&!body){toast('Write a note first.');return}let n=[];try{n=JSON.parse(localStorage.getItem('tvru_lore')||'[]')}catch{}n.unshift({title,body,date:new Date().toISOString()});localStorage.setItem('tvru_lore',JSON.stringify(n));document.getElementById('loreSaved').textContent=`Saved ${n.length} lore note(s) in this browser.`;document.getElementById('loreTitle').value='';document.getElementById('loreText').value='';toast('Lore note saved locally!')}
+
+let authRegister=false, tvruUser=null;
+function openLogin(){document.getElementById('loginModal').style.display='grid'}
+function closeLogin(){document.getElementById('loginModal').style.display='none'}
+function switchAuth(reg){authRegister=reg;document.getElementById('loginHeading').textContent=reg?'Create your TVRU account':'Log in to TVRU';document.getElementById('registerNameField').style.display=reg?'block':'none';document.getElementById('loginSwitch').innerHTML=reg?'Already registered? <a href="#" onclick="switchAuth(false);return false">Log in</a>':'Need an account? <a href="#" onclick="switchAuth(true);return false">Register</a>'}
+async function refreshAccount(){try{let r=await fetch(`${UPLOAD_API}/auth/me`,{credentials:'include'});if(!r.ok)throw 0;let d=await r.json();tvruUser=d.user;document.getElementById('accountArea').innerHTML=`${esc(tvruUser.displayName||tvruUser.email)} <button class="btn" onclick="logoutTVRU()">Log out</button>`;if(['owner','staff'].includes(tvruUser.role)){let s=document.createElement('button');s.className='btn';s.textContent='Staff';s.onclick=()=>openStaffPanel();document.getElementById('accountArea').append(' ',s)}}catch{tvruUser=null}}
+document.getElementById('loginForm').addEventListener('submit',async e=>{e.preventDefault();let b=e.submitter;b.disabled=true;try{let body={email:document.getElementById('loginEmail').value.trim(),password:document.getElementById('loginPassword').value};if(authRegister)body.displayName=document.getElementById('registerName').value.trim();let r=await fetch(`${UPLOAD_API}${authRegister?'/auth/register':'/auth/login'}`,{method:'POST',credentials:'include',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)});let d=await r.json();if(!r.ok)throw new Error(d.error||'Could not sign in');closeLogin();await refreshAccount();toast('Welcome to TVRU!')}catch(err){toast(err.message)}finally{b.disabled=false}});
+async function logoutTVRU(){await fetch(`${UPLOAD_API}/auth/logout`,{method:'POST',credentials:'include'});tvruUser=null;await refreshAccount();toast('Logged out')}
+async function openStaffPanel(){if(!tvruUser||!['owner','staff'].includes(tvruUser.role))return;let r=await fetch(`${UPLOAD_API}/admin/posts`,{credentials:'include'});if(!r.ok)return toast('Staff access denied');let d=await r.json();let text=(d.posts||[]).map(p=>`${p.title} — ${p.category} — ${p.id}`).join('\\n')||'No posts';let id=prompt('Staff moderation — copy the post ID you want to remove:\\n\\n'+text);if(!id)return;if(!confirm('Delete this post and its files?'))return;let del=await fetch(`${UPLOAD_API}/posts/${encodeURIComponent(id)}`,{method:'DELETE',credentials:'include'});if(!del.ok)return toast('Could not delete post');await loadUploads();toast('Post deleted')}
+refreshAccount();
+
+// Navigation accessibility and responsive sidebar behavior.
+document.querySelectorAll('.navbtn').forEach(button=>{
+  const label=button.querySelector('.navtext')?.textContent.trim()||'Navigate';
+  button.setAttribute('aria-label',label);
+  button.setAttribute('title',label);
+});
+document.addEventListener('keydown',event=>{
+  if(event.key==='Escape')document.getElementById('sidebar').classList.remove('open');
+});
+
 initCategories();renderTiles();renderStats();renderLibrary();updatePreview();loadUploads();
 </script></body></html>
